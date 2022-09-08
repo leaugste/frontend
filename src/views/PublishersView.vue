@@ -51,7 +51,8 @@ export default {
               type="text"
               class="home__input"
               placeholder="Insert publisher's name"
-              v-model="publisher.publisher" @keyup.enter="save"
+              v-model="publisher.publisher"
+              @keyup.enter="save"
             />
           </div>
           <div class="input__info">
@@ -59,7 +60,8 @@ export default {
               type="number"
               class="home__input"
               placeholder="Insert publisher's age"
-              v-model="publisher.age" @keyup.enter="save"
+              v-model="publisher.age"
+              @keyup.enter="save"
             />
           </div>
           <div class="input__info">
@@ -67,7 +69,8 @@ export default {
               type="text"
               class="home__input"
               placeholder="Insert publisher's CEO"
-              v-model="publisher.ceo" @keyup.enter="save"
+              v-model="publisher.ceo"
+              @keyup.enter="save"
             />
           </div>
           <div class="input__info">
@@ -75,7 +78,8 @@ export default {
               type="text"
               class="home__input"
               placeholder="Insert publisher's founder"
-              v-model="publisher.founder" @keyup.enter="save"
+              v-model="publisher.founder"
+              @keyup.enter="save"
             />
           </div>
           <div class="input__info">
@@ -83,7 +87,8 @@ export default {
               type="text"
               class="home__input"
               placeholder="Insert employees's number"
-              v-model="publisher.employees" @keyup.enter="save"
+              v-model="publisher.employees"
+              @keyup.enter="save"
             />
           </div>
           <a href="#" class="home__button" @click="save">SAVE</a>
@@ -108,7 +113,9 @@ export default {
               <td>{{ publisher.founder }}</td>
               <td>{{ publisher.employees }}</td>
               <td>
-                <button class="info__button" @click="edit(publisher)">EDIT</button>
+                <button class="info__button" @click="edit(publisher)">
+                  EDIT
+                </button>
               </td>
             </tr>
           </tbody>
