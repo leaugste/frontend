@@ -38,67 +38,92 @@ export default {
       <div class="home__shape-small"></div>
       <div class="home__shape-big1"></div>
       <div class="home__shape-big2"></div>
-      <img src="@/assets/img/shape-bg.png" alt="" class="home__shape-bg">
+      <img src="@/assets/img/shape-bg.png" alt="" class="home__shape-bg" />
 
       <div class="home__container container">
         <div class="home__info">
           <h1 class="home__title">
             <span>Books</span>
           </h1>
-          <p class="home__description">
-            Insert the info below.
-          </p>
+          <p class="home__description">Insert the info below.</p>
           <div class="input__info">
-            <input type="text" class="home__input" placeholder="Insert book's name" v-model="book.book" @keyup.enter="save">
+            <input
+              type="text"
+              class="home__input"
+              placeholder="Insert book's name"
+              v-model="book.book"
+              @keyup.enter="save"
+            />
           </div>
           <div class="input__info">
-            <input type="number" class="home__input" placeholder="Insert book's code" v-model="book.code" @keyup.enter="save">
+            <input
+              type="number"
+              class="home__input"
+              placeholder="Insert book's code"
+              v-model="book.code"
+              @keyup.enter="save"
+            />
           </div>
           <div class="input__info">
-            <input type="text" class="home__input" placeholder="Insert book's category" v-model="book.category" @keyup.enter="save">
+            <input
+              type="text"
+              class="home__input"
+              placeholder="Insert book's category"
+              v-model="book.category"
+              @keyup.enter="save"
+            />
           </div>
           <div class="input__info">
-            <input type="text" class="home__input" placeholder="Insert book's author" v-model="book.author" @keyup.enter="save">
+            <input
+              type="text"
+              class="home__input"
+              placeholder="Insert book's author"
+              v-model="book.author"
+              @keyup.enter="save"
+            />
           </div>
           <div class="input__info">
-            <input type="text" class="home__input" placeholder="Insert book's publisher" v-model="book.publisher" @keyup.enter="save">
+            <input
+              type="text"
+              class="home__input"
+              placeholder="Insert book's publisher"
+              v-model="book.publisher"
+              @keyup.enter="save"
+            />
           </div>
           <a href="#" class="home__button" @click="save">SAVE</a>
         </div>
         <table>
-        <thead>
-          <tr>
-            <th>Book</th>
-            <th>Code</th>
-            <th>Category</th>
-            <th>Author</th>
-            <th>Publisher</th>
-            <th>Options</th>
-          </tr>
-        </thead>
+          <thead>
+            <tr>
+              <th>Book</th>
+              <th>Code</th>
+              <th>Category</th>
+              <th>Author</th>
+              <th>Publisher</th>
+              <th>Options</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr v-for="book in books" :key="book.id">
-            <td>{{ book.book }}</td>
-            <td>{{ book.code }}</td>
-            <td>{{ book.category }}</td>
-            <td>{{ book.author }}</td>
-            <td>{{ book.publisher }}</td>
-            <td>
-              <button class="info__button" @click="edit(book)">EDIT</button>
-            </td>
-          </tr>
-        </tbody>
-
-      </table>
+          <tbody>
+            <tr v-for="book in books" :key="book.id">
+              <td>{{ book.book }}</td>
+              <td>{{ book.code }}</td>
+              <td>{{ book.category }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.publisher }}</td>
+              <td>
+                <button class="info__button" @click="edit(book)">EDIT</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      
     </section>
   </main>
 </template>
 
 <style>
-
 table {
   width: 50%;
   display: inline;
@@ -119,13 +144,15 @@ table {
 
 .home__title {
   font-size: var(--biggest-font-size);
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .home__title span {
-  background: linear-gradient(90deg,
-              var(--second-color) 0%,
-              var(--first-color) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--second-color) 0%,
+    var(--first-color) 100%
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -136,49 +163,55 @@ table {
 
 .home__button {
   display: inline-block;
-  background: linear-gradient(95deg,
-              var(--second-color) 0%,
-              var(--first-color) 100%);
+  background: linear-gradient(
+    95deg,
+    var(--second-color) 0%,
+    var(--first-color) 100%
+  );
   padding: 1rem 2rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: var(--text-color);
   font-weight: var(--font-semi-bold);
-  transition: box-shadow .4s;
+  transition: box-shadow 0.4s;
 }
 
 .info__button {
   display: inline-block;
-  background: linear-gradient(95deg,
-              var(--second-color) 0%,
-              var(--first-color) 100%);
+  background: linear-gradient(
+    95deg,
+    var(--second-color) 0%,
+    var(--first-color) 100%
+  );
   padding: 1rem 2rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   border-color: transparent;
   color: var(--text-color);
   font-family: var(--biggest-font-size);
   font-weight: var(--font-semi-bold);
-  transition: box-shadow .4s;
+  transition: box-shadow 0.4s;
   justify-content: center;
   align-items: center;
 }
 
 .info__button:hover {
-  box-shadow: 0 8px 48px hsla(203, 71%, 25%, .5);
+  box-shadow: 0 8px 48px hsla(203, 71%, 25%, 0.5);
   cursor: pointer;
   color: var(--text-color-light);
 }
 
 .home__button:hover {
-  box-shadow: 0 8px 48px hsla(203, 71%, 25%, .5);
+  box-shadow: 0 8px 48px hsla(203, 71%, 25%, 0.5);
 }
 
 .home__input {
   display: inline-block;
-  background: linear-gradient(95deg,
-              var(--second-color) 0%,
-              var(--first-color) 100%);
+  background: linear-gradient(
+    95deg,
+    var(--second-color) 0%,
+    var(--first-color) 100%
+  );
   padding: 1rem 2rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: var(--text-color);
   font-family: var(--font-semi-bold);
   border-color: transparent;
@@ -188,8 +221,9 @@ table {
   margin-top: 1rem;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -247,18 +281,18 @@ input::-webkit-inner-spin-button {
   height: 100%;
   object-fit: cover;
   mix-blend-mode: soft-light;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 @keyframes float-eth {
   0% {
-    transform: translateY(.5rem);
+    transform: translateY(0.5rem);
   }
   50% {
     transform: translateY(1.5rem);
   }
   100% {
-    transform: translateY(.5rem);
+    transform: translateY(0.5rem);
   }
 }
 
@@ -270,7 +304,7 @@ input::-webkit-inner-spin-button {
 
 @media screen and (min-width: 767px) {
   .nav {
-    height: calc(var(--header-height) + 1.5rem );
+    height: calc(var(--header-height) + 1.5rem);
   }
   .nav__toggle,
   .nav__close,
