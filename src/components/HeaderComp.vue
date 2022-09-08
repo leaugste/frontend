@@ -39,10 +39,6 @@
         />
       </div>
 
-      <!-- Toggle button -->
-      <div class="nav__toggle" id="nav-toggle">
-        <i class="ri-menu-4-line"></i>
-      </div>
     </nav>
   </header>
 </template>
