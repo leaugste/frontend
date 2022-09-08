@@ -1,0 +1,75 @@
+/* _____ Google Fonts _____ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --header-height: 3.5rem;
+
+  /* _____ Colors _____ */
+  --first-color: hsl(35, 96%, 70%);
+  --second-color: hsl(341, 48%, 53%);
+  --text-color: hsl(203, 8%, 98%);
+  --text-color-light: hsl(203, 8%, 80%);
+  --body-color: hsl(225, 10%, 23%);
+
+  /* _____ Font and typography _____ */
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 1.75rem;
+  /* --h1-font-size: 1.5rem; */
+  --h2-font-size: 1.25rem;
+  /* --h3-font-size: 1rem; */
+  --normal-font-size: 0.938rem;
+  /* --small-font-size: 0.813rem; */
+  --smaller-font-size: 0.75rem;
+  /* --tiny-font-size: 0.625rem; */
+
+  /* _____ Font weight _____ */
+  /* --font-medium: 500; */
+  --font-semi-bold: 600;
+
+  /* z index */
+  /* --z-tooltip: 10; */
+  --z-fixed: 100;
+  /* --z-modal: 1000; */
+}
+
+/* _____ Base _____ */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: var(--text-color-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* _____ Reusable CSS Classes _____  */
+.container {
+  max-width: 1024px;
+  margin-inline: 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
